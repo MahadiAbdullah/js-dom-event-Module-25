@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary: Event Handlers</title>
+</head>
+<body>
+    <h1>Explore DOM events</h1>
+
+
+    <!-- ai 2 ta system add kra jy a 2 ta jante hbe  -->
+
+
+    <!-- option - 1  -->
+    <button onclick="makeGreen()">Make Green</button>
+    <!-- option - 2  -->
+    <button id = "make-yellow">Make Yellow</button>
+    <br>
+    <!-- ata input part  -->
+
+    <input id = "user-email" type="email">
+
+    <script>
+        // option - 1 
+        function makeGreen(){
+            document.body.style.backgroundColor = 'green';
+        }
+        // option - 2 
+        document.getElementById('make-yellow').addEventListener('click', function(){
+           document.body.style.backgroundColor = 'yellow';
+        })
+
+        // ata input part 
+
+        // input type 'click' hbe na atay hbe 'keyup' hbe (keyup dile sob thik hbe onno gular cheye ); (ki ki type kortechi ata jodi paite hy tbe event parameter nite hbe);
+        
+        // keyup event 
+
+        document.getElementById('user-email').addEventListener('keyup', function(event){
+            console.log(event.target.value);
+        })
+    </script>
+</body>
+</html>
